@@ -1,0 +1,17 @@
+// Configuración de estilos
+@import 'config/colors';
+@import 'config/fonts';
+
+// Mixins
+@import 'mixins/breakpoints';
+@import 'mixins/rest-list';
+
+// Estilos Bases
+@import 'base/normalize';
+@import 'base/base';
+
+// Components
+@import 'components/button';
+
+//Bloque
+@import 'layout/article-box';

@@ -1,0 +1,81 @@
+.article-box {
+	//outline: 1px solid red;
+	padding: 30px;
+	font-size: 1.4rem;
+	@include laptop {
+		padding: 60px;
+	}
+
+	&__title {
+		margin: 0;
+		font-size: 1.4rem;
+	}
+
+	&__subtitle {
+		color: $color-brigh-yellow;
+		font-weight: $font-bold;
+		font-size: 1.1rem;
+	}
+	&__text {
+		color: $color-grayish-blue;
+	}
+	&__currency::before {
+		content: '$';
+	}
+	&__currency {
+		font-size: 2rem;
+		font-weight: $font-bold;
+	}
+}
+.article-box:first-of-type {
+	border-radius: 5px 5px 0 0;
+}
+@include laptop {
+	.article-box:first-of-type {
+		grid-column: 1/3;
+	}
+
+	.article-box:nth-last-child(2) {
+		border-radius: 0 0 0 10px;
+	}
+}
+.article-box:last-of-type {
+	border-radius: 0 0 5px 5px;
+}
+@include laptop {
+	.article-box:last-of-type {
+		border-radius: 0 0 10px 0;
+	}
+}
+
+// Modificadores
+.article-box__currency--small {
+	font-size: 1rem;
+	font-weight: $font-regular;
+}
+.article-box__title--white {
+	color: $color-light;
+	font-size: 1.05rem;
+	margin-bottom: 30px;
+}
+
+// Modificadores de caja
+.article-box--lingt {
+	background-color: $color-light;
+	color: $color-light-cyan;
+}
+
+.article-box--cyan {
+	background-color: $color-dark-cyan;
+	color: $color-light-gray;
+}
+
+.article-box--lingt-cyan {
+	background-color: $color-light-cyan;
+	color: $color-light-gray;
+	.list {
+		@include reset-list;
+		font-size: 1.1rem;
+		line-height: 25px;
+	}
+}
